@@ -19,4 +19,11 @@ app.patch ( "/about" , (req, res) => {
     res.status ( 200 ).send() // just showed that arrived 
 } )
 
+app.delete ( " /about ", (req, res ) => {
+    res.json( {
+        id: "1",
+        message : " the product has been deleted "
+    } )
+} )
+
 app.listen(PORT , ()=>console.log(`running api on ${PORT}`))
