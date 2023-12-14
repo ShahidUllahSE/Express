@@ -3,8 +3,16 @@ const PORT = process.env.PORT || 3001
 
 const app = express();
 
+app.use(express.json());
+
+
 app.get ("/about", ( req, res ) =>{
     // console.log('reached to endpoint')
+
+    //body
+    const {name}=req.body;
+    res.send("hello" + name);
+
     res.send("we are now in about route")
 } )
 
